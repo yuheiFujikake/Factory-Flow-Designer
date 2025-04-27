@@ -1,7 +1,10 @@
 "use client";
-import { ProductList, RequiredProduct } from "@/data/product";
+import { ProductList, RequiredProduct } from "@/database/product";
 import { calculateProductionRequirements } from "@/libs/calc";
+import * as Record from "@/database/record";
 import { useState } from "react";
+import { SelectProduct } from "@/components/SelectProduct";
+
 export default function Home() {
   const [requiredProducts, setRequiredProducts] = useState<RequiredProduct>();
 
@@ -183,6 +186,9 @@ export default function Home() {
                 リセット
               </button>
             </div>
+          </div>
+          <div>
+            <SelectProduct productList={Record.ProductList} ></SelectProduct>
           </div>
 
           {/* 結果部分 - 必要材料一覧 */}

@@ -1,6 +1,6 @@
 /********************************************************************************************************/
 
-import { ProductId, ProductInfo, ProductList, RequiredProduct } from "@/data/product";
+import { ProductId, ProductInfo, ProductList, RequiredProduct } from "@/database/product";
 
 const findProductById = (id: ProductId): ProductInfo => {
   const product = ProductList[id];
